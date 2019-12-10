@@ -5,8 +5,8 @@ total=0
 change=0
 total_change=0
 
-payBank_path='budget_data.csv'
-with open(payBank_path,newline='',encoding="UTF-8") as csv_file:
+pyBank_path='budget_data.csv'
+with open(pyBank_path,newline='',encoding="UTF-8") as csv_file:
     csv_reader=csv.reader(csv_file,delimiter=',')
     csv_header=next(csv_reader)
     value = []
@@ -45,7 +45,7 @@ with open(payBank_path,newline='',encoding="UTF-8") as csv_file:
     print(f"Greatest Decrease in Profits: {dec_month} (${dec_change})")
 
 
-f=open("PayBank Result.txt","w",encoding="UTF-8") 
+f=open("pyBank Result.txt","w",encoding="UTF-8") 
 print("Financial Analysis",file=f)
 print("------------------------------------------------------------",file=f),
 print(f"Total Months: {count}",file=f),
