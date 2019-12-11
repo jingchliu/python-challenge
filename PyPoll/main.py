@@ -31,10 +31,8 @@ with open(pyPoll_path,newline='',encoding="UTF-8") as csv_file:
     print("----------------------------------"),
     print(f"Total Votes: {total}"),
     print("----------------------------------"),
-    print(f"{result_key[0]}: {percentage[0]}% ({result[result_key[0]]})"),
-    print(f"{result_key[1]}: {percentage[1]}% ({result[result_key[1]]})"),
-    print(f"{result_key[2]}: {percentage[2]}% ({result[result_key[2]]})"),
-    print(f"{result_key[3]}: {percentage[3]}% ({result[result_key[3]]})"),
+    for i in range(len(result_key)):
+        print(f"{result_key[i]}: {percentage[i]}% ({result[result_key[i]]})"),
     print("-----------------------------------"),
     print(f"Winner: {winner}"),
     print("-----------------------------------")
@@ -44,10 +42,8 @@ f=open("pyPoll Result.txt","w",encoding="UTF-8")
 print("Election Results",file=f),
 print("----------------------------------------",file=f),
 print(f"Total Votes: {total}",file=f),
-print(f"{result_key[0]}: {percentage[0]}% ({result[result_key[0]]})",file=f),
-print(f"{result_key[1]}: {percentage[1]}% ({result[result_key[1]]})",file=f),
-print(f"{result_key[2]}: {percentage[2]}% ({result[result_key[2]]})",file=f),
-print(f"{result_key[3]}c: {percentage[3]}% ({result[result_key[3]]})",file=f),
+for i in range(len(result_key)):
+    print(f"{result_key[i]}: {percentage[i]}% ({result[result_key[i]]})",file=f),
 print("-----------------------------------------",file=f),
 print(f"Winner: {winner}",file=f),
 print("-----------------------------------------",file=f),
